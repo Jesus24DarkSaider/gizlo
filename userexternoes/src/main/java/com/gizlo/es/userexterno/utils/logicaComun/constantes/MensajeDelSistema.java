@@ -22,6 +22,5 @@ public interface MensajeDelSistema {
 	
 	String PROCESO_EXITOSO = "OK";
 	
-	
 
 }
