@@ -2,32 +2,19 @@ package com.gizlo.es.userexterno.utils.logicaComun.utilitarios;
 
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import io.swagger.v3.oas.annotations.media.Schema;
 
-/**
- * Modelo Canonico de Respuesta
- */
-@Schema(description = "Modelo Canonico de Respuesta")
-public class Respuesta {
-	@JsonProperty("codigoRespuesta")
+@Schema(description = "DTO DEL TIPO DE RESPUESTA")
+public class RespuestaDto {
+
 	private String codigoRespuesta;
 
-	@JsonProperty("descripcion")
 	private String descripcion;
 
-	public Respuesta codigoRespuesta(String codigoRespuesta) {
+	public RespuestaDto codigoRespuesta(String codigoRespuesta) {
 		this.codigoRespuesta = codigoRespuesta;
 		return this;
 	}
-
-	/**
-	 * Get codigoRespuesta
-	 * 
-	 * @return codigoRespuesta
-	 */
-	@Schema(defaultValue = "")
 
 	public String getCodigoRespuesta() {
 		return codigoRespuesta;
@@ -37,17 +24,10 @@ public class Respuesta {
 		this.codigoRespuesta = codigoRespuesta;
 	}
 
-	public Respuesta descripcion(String descripcion) {
+	public RespuestaDto descripcion(String descripcion) {
 		this.descripcion = descripcion;
 		return this;
 	}
-
-	/**
-	 * Get descripcion
-	 * 
-	 * @return descripcion
-	 */
-	@Schema(defaultValue = "")
 
 	public String getDescripcion() {
 		return descripcion;
@@ -65,7 +45,7 @@ public class Respuesta {
 		if (o == null || getClass() != o.getClass()) {
 			return false;
 		}
-		Respuesta respuestaType = (Respuesta) o;
+		RespuestaDto respuestaType = (RespuestaDto) o;
 		return Objects.equals(this.codigoRespuesta, respuestaType.codigoRespuesta)
 				&& Objects.equals(this.descripcion, respuestaType.descripcion);
 	}
@@ -86,10 +66,6 @@ public class Respuesta {
 		return sb.toString();
 	}
 
-	/**
-	 * Convert the given object to string with each line indented by 4 spaces
-	 * (except the first line).
-	 */
 	private String toIndentedString(java.lang.Object o) {
 		if (o == null) {
 			return "null";
