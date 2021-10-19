@@ -1,5 +1,5 @@
 package com.gizlo.es.userexterno.service.contract;
 
-public interface IUserExternoRepository {
+public interface IUserExternoSvc {
 
 }

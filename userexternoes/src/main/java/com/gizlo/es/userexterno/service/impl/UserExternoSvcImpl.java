@@ -1,5 +1,5 @@
 package com.gizlo.es.userexterno.service.impl;
 
-public class UserExterno {
+public class UserExternoSvcImpl {
 
 }
