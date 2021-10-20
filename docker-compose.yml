@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  userexternoes:
+    image: 'userexternoes'
+    restart: always
+    build:
+      context: ./userexternoes
+      dockerfile: Dockerfile
+    container_name: userexternoes
+    ports:
+      - 8103:8103
+  userinternoes:
+    image: 'userinternoes'
+    restart: always
+    build:
+      context: ./userinternoes
+      dockerfile: Dockerfile
+    container_name: userinternoes
+    ports:
+      - 8102:8102
+  usuarioms:
+    image: 'usuarioms'
+    restart: always
+    build:
+      context: ./usuarioms
+      dockerfile: Dockerfile
+    container_name: usuarioms
+    ports:
+      - 9021:9021
+      
+      
+      

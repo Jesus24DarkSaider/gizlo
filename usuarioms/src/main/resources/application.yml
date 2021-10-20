@@ -1,6 +1,6 @@
 server:
-  port: 8992
+  port: 9021
 
 uri:
-  usuarioexternoes: "http://127.0.0.1:9897"
-  usuariointernoes: "http://127.0.0.1:9898"
+  usuarioexternoes: "http://192.168.0.106:8103"
+  usuariointernoes: "http://192.168.0.106:8102"
