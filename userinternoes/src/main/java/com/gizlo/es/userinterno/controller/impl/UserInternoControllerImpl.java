@@ -30,13 +30,13 @@ public class UserInternoControllerImpl implements IUserInternoController {
 	IUserInternoSvc serviceUserInterno;
 
 	@Override
-	public ResponseEntity<Object> crearUsuarioExterno(@Valid UserInternoDto userInternoDto) {
+	public ResponseEntity<Object> crearUsuarioInterno(@Valid UserInternoDto userInternoDto) {
 		LOG.info(separador);
 		ResponseEntity<Object> respuesta;
 		try {
 			LOG.info("INICIA CAPACIDAD DE CREAR USUARIO INTERNO");
 			UserInternoDto usuarioInternoDto;
-			usuarioInternoDto = serviceUserInterno.crearUsuarioExterno(userInternoDto);
+			usuarioInternoDto = serviceUserInterno.crearUsuarioInterno(userInternoDto);
 			respuesta = EntityServiceValidator.validarResultado(usuarioInternoDto);
 		} catch (Exception e) {
 			LOG.info("EXCEPCION " + e.getMessage());

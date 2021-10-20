@@ -20,7 +20,7 @@ public class IUserInternoSvcImpl implements IUserInternoSvc {
 	IUserInternoRepository userInternoRepository;
 
 	@Override
-	public UserInternoDto crearUsuarioExterno(@Valid UserInternoDto userInternoDto) {
+	public UserInternoDto crearUsuarioInterno(@Valid UserInternoDto userInternoDto) {
 		UserInterno usuarioInterno;
 		usuarioInterno = UserInternoConvert.convertTypeToModel(userInternoDto);
 		usuarioInterno.setId(null);

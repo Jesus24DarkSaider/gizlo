@@ -10,6 +10,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 
@@ -22,6 +23,7 @@ import com.gizlo.ms.usuario.utils.logicaComun.exception.TipoError;
 import com.gizlo.ms.usuario.utils.patronCommand.ICommand;
 import com.gizlo.ms.usuario.utils.patronCommand.IParameter;
 
+@Component
 public class ConsultarUsuarioInternoCommand implements ICommand {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ConsultarUsuarioExternoCommand.class);

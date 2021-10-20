@@ -52,7 +52,7 @@ public interface IUsuarioController {
 			@Valid @org.springframework.web.bind.annotation.RequestBody(required = true) UsuarioExternoDto usuarioExternoDTO);
 
 	// CAPACIDAD QUE SIRVE PARA CREAR EL USUARIO EXTERNO MEDIANTE UN POST
-	@Operation(method = "crearUsuarioInterno", operationId = "crearUsuarioInterno", description = "Capacidad que se encarga de crear el usuario interno", tags = "UsuarioInternoEntityServiceV1", summary = "crearUsuarioInterno")
+	@Operation(method = "crearUsuarioInterno", operationId = "crearUsuarioInterno", description = "Capacidad que se encarga de crear el usuario interno", tags = "UsuarioMSV1", summary = "crearUsuarioInterno")
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "201", description = "OK", content = @Content(schema = @Schema(implementation = RespuestaDto.class))),
 
@@ -61,7 +61,7 @@ public interface IUsuarioController {
 			@ApiResponse(responseCode = "500", description = "Internal Server Error", content = @Content(schema = @Schema(implementation = RespuestaDto.class))) })
 	@PostMapping(value = "/api/ms/users/interno/v1", produces = "application/json; charset=utf-8", consumes = "application/json; charset=utf-8")
 	@io.swagger.v3.oas.annotations.parameters.RequestBody(description = "Modelo Canonico de Usuario Interno", required = true, content = @Content(schema = @Schema(implementation = UsuarioInternoDto.class)))
-	public ResponseEntity<Object> crearUsuarioExterno(
+	public ResponseEntity<Object> crearUsuarioInterno(
 			@Valid @org.springframework.web.bind.annotation.RequestBody(required = true) UsuarioInternoDto userInternoDtof);
 
 }

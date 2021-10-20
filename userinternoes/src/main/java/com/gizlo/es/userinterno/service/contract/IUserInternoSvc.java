@@ -8,7 +8,7 @@ import com.gizlo.es.userinterno.controller.dto.UserInternoDto;
 
 public interface IUserInternoSvc {
 
-	public UserInternoDto crearUsuarioExterno(@Valid UserInternoDto userInternoDto);
+	public UserInternoDto crearUsuarioInterno(@Valid UserInternoDto userInternoDto);
 
 	public List<UserInternoDto> consultarUsuariosInternos();
 

@@ -28,7 +28,7 @@ public interface IUserInternoController {
 			@ApiResponse(responseCode = "500", description = "Internal Server Error", content = @Content(schema = @Schema(implementation = RespuestaDto.class))) })
 	@PostMapping(value = "/api/es/users/interno/v1", produces = "application/json; charset=utf-8", consumes = "application/json; charset=utf-8")
 	@io.swagger.v3.oas.annotations.parameters.RequestBody(description = "Modelo Canonico de Usuario Interno", required = true, content = @Content(schema = @Schema(implementation = UserInternoDto.class)))
-	public ResponseEntity<Object> crearUsuarioExterno(
+	public ResponseEntity<Object> crearUsuarioInterno(
 			@Valid @org.springframework.web.bind.annotation.RequestBody(required = true) UserInternoDto userInternoDtof);
 
 	// CAPACIDAD QUE SIRVE PARA LISTAR USUARIOS INTERNOS

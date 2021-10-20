@@ -2,7 +2,7 @@ package com.gizlo.ms.usuario.controller.dto;
 
 public enum USERTYPE {
 
-	USUARIO_INTERNO("USUARIO_INTERNO("), USUARIO_EXTERNO("USUARIO_EXTERNO");
+	USUARIO_INTERNO("USUARIO_INTERNO"), USUARIO_EXTERNO("USUARIO_EXTERNO");
 
 	private String value;
 
