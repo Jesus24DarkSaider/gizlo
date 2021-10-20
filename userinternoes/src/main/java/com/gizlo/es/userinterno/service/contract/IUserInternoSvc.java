@@ -1,5 +1,15 @@
 package com.gizlo.es.userinterno.service.contract;
 
-public class IUserInternoSvc {
+import java.util.List;
+
+import javax.validation.Valid;
+
+import com.gizlo.es.userinterno.controller.dto.UserInternoDto;
+
+public interface IUserInternoSvc {
+
+	public UserInternoDto crearUsuarioExterno(@Valid UserInternoDto userInternoDto);
+
+	public List<UserInternoDto> consultarUsuariosInternos();
 
 }

@@ -1,10 +1,16 @@
 package com.gizlo.es.userinterno.controller.dto;
 
-import java.util.UUID;
+import javax.validation.constraints.NotNull;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("userExterno")
 public class UserInternoDto {
 
-	private UUID id;
+	@Id
+	@NotNull
+	private String id;
 	private String nombre;
 	private String apellidos;
 	private String correoCorporativo;
@@ -14,14 +20,14 @@ public class UserInternoDto {
 	/**
 	 * @return the id
 	 */
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
