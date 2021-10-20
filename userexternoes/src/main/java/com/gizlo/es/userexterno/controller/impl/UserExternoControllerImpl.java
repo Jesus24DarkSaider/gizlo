@@ -42,7 +42,7 @@ public class UserExternoControllerImpl implements IUserExternoController {
 			respuesta = EntityServiceValidator.validarResultado(usuario);
 		} catch (BusinessException ex) {
 			LOG.info("ERROR DE NEGOCIO", ex.getMessage());
-			respuesta = DataValidator.validarResultado(ex);
+			respuesta = DataValidator.validarResultadoObj(ex);
 		} catch (Exception e) {
 			LOG.info("EXCEPCION " + e.getMessage());
 			respuesta = new ResponseEntity<>(
@@ -65,7 +65,7 @@ public class UserExternoControllerImpl implements IUserExternoController {
 			respuesta = EntityServiceValidator.validarResultado(usuario);
 		} catch (BusinessException ex) {
 			LOG.info("ERROR DE NEGOCIO", ex.getMessage());
-			respuesta = DataValidator.validarResultado(ex);
+			respuesta = DataValidator.validarResultadoObj(ex);
 		} catch (Exception e) {
 			LOG.info("EXCEPCION " + e.getMessage());
 			respuesta = new ResponseEntity<>(

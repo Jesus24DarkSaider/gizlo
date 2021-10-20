@@ -1,8 +1,9 @@
-package com.gizlo.es.userinterno.utils.logicaComun.utilitarios;
+package com.gizlo.ms.usuario.utils.logicaComun.utilitarios;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import com.gizlo.es.userinterno.utils.logicaComun.exception.BusinessException;
+
+import com.gizlo.ms.usuario.utils.logicaComun.exception.BusinessException;
 
 public final class DataValidator {
 
@@ -35,6 +36,7 @@ public final class DataValidator {
 					HttpStatus.INTERNAL_SERVER_ERROR);
 			break;
 		}
+
 		return respuesta;
 	}
 }
