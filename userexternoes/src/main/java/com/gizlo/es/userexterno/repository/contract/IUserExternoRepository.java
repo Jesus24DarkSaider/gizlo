@@ -1,5 +1,13 @@
 package com.gizlo.es.userexterno.repository.contract;
 
-public interface IUserExternoRepository {
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import com.gizlo.es.userexterno.repository.model.UserExterno;
+
+@Repository
+public interface IUserExternoRepository extends MongoRepository<UserExterno, String> {
+
 
 }

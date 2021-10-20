@@ -1,10 +1,9 @@
 package com.gizlo.es.userexterno.controller.dto;
 
-import java.util.UUID;
 
 public class UserExternoDto {
 
-	private UUID id;
+	private String id;
 	private String nombre;
 	private String apellidos;
 	private String correoPersonal;
@@ -14,14 +13,14 @@ public class UserExternoDto {
 	/**
 	 * @return the id
 	 */
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

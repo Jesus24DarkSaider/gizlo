@@ -10,6 +10,7 @@ import com.gizlo.es.userexterno.controller.dto.UserExternoDto;
 import com.gizlo.es.userexterno.utils.logicaComun.utilitarios.RespuestaDto;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -34,7 +35,7 @@ public interface IUserExternoController {
 	@Operation(method = "consultarUsuarioExternos", operationId = "consultarUsuariosExternos", description = "consultarUsuariosExternos", tags = "UsuarioExternoEntityServiceV1", summary = "consultarUsuariosExternos")
 	@ApiResponses(value = {
 
-			@ApiResponse(responseCode = "200", description = "OK", content = @Content(schema = @Schema(implementation = UserExternoDto.class))),
+			@ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = UserExternoDto.class)))),
 
 			@ApiResponse(responseCode = "204", description = "No Content", content = @Content(schema = @Schema(implementation = RespuestaDto.class))),
 
@@ -44,6 +45,6 @@ public interface IUserExternoController {
 
 	})
 	@GetMapping(value = "/api/es/users/externo/v1", produces = "application/json; charset=utf-8")
-	public ResponseEntity<Object> consultarIntentosLoginPorCorreo();
+	public ResponseEntity<Object> consultarUsuariosExternos();
 
 }
