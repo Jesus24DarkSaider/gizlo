@@ -1,6 +1,8 @@
 package com.gizlo.ms.usuario.controller.dto;
 
-public class UsuarioExternoDto {
+import com.gizlo.ms.usuario.utils.patronCommand.IParameter;
+
+public class UsuarioExternoDto implements IParameter{
 
 	private String id;
 	private String nombre;
