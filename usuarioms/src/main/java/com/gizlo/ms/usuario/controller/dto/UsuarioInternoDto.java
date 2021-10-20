@@ -1,7 +1,7 @@
-package com.gizlo.es.userinterno.controller.dto;
+package com.gizlo.ms.usuario.controller.dto;
 
-public class UserInternoDto {
-	
+public class UsuarioInternoDto {
+
 	private String id;
 	private String nombre;
 	private String apellidos;
