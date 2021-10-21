@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
         this.nombreColumnas.nombreColumnaDos = 'Apellidos';
         this.nombreColumnas.nombreColumnaTres = 'Correo Personal';
         this.nombreColumnas.nombreColumnaCuatro = 'Ciudad';
-        this.nombreColumnas.nombreColumnaSeis = 'Edad';
+        this.nombreColumnas.nombreColumnaCinco = 'Edad';
 
         // MAPEAMOS LOS DATOS QUE TRAE EL SERVICIO
         for (let index in this.listadoUsuariosExternos) {
