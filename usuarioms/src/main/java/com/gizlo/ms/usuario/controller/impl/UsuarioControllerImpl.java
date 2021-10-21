@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gizlo.ms.usuario.controller.contract.IUsuarioController;
@@ -21,6 +22,7 @@ import com.gizlo.ms.usuario.utils.logicaComun.utilitarios.DataValidator;
 import com.gizlo.ms.usuario.utils.logicaComun.utilitarios.RespuestaDto;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class UsuarioControllerImpl implements IUsuarioController {
 
 	private static final Logger LOG = LoggerFactory.getLogger(UsuarioControllerImpl.class);
