@@ -16,6 +16,7 @@
            <label>Seleccione el tipo de usuario</label>
            <select class="form-control" [(ngModel)]="tipoUsuarioSeleccionado.tipo" 
             (change)= "onSeleccionarCombo($event)" >
+     
              <option *ngFor="let x of tiposUser" value={{x.tipo}}>
                {{x.descripcion}}
              </option>

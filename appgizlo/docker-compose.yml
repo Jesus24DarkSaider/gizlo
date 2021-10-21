@@ -1,0 +1,11 @@
+version: '2'
+services:
+  aplicativoweb:
+    image: 'aplicativoweb'
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aplicativoweb
+    ports:
+      - 8015:80

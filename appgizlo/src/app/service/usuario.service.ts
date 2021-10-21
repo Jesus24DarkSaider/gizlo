@@ -15,8 +15,9 @@ export class UsuarioService {
   private urlUsuarioExterno="/api/ms/users/tipo/v1/USUARIO_EXTERNO";
 
   private tiposDeUsuario : TipoUsuario[] = [
-    { tipo : 'USUARIO_INTERNO', descripcion : 'INTERNO'},
-    { tipo : 'USUARIO_EXTERNO', descripcion : 'EXTERNO'}
+    { tipo : 'USUARIO_EXTERNO', descripcion : 'EXTERNO'},
+    { tipo : 'USUARIO_INTERNO', descripcion : 'INTERNO'}
+   
   ]
 
   obtenerTipoUsuario(): TipoUsuario[]{
